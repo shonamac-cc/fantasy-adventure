@@ -26,5 +26,5 @@ public abstract class Enemy  {
         this.name = name;
     }
 
-    public abstract void damage();
+
 }

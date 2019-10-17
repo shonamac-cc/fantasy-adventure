@@ -1,6 +1,7 @@
 package fantasyWorld.weapons;
 
 import fantasyWorld.behaviours.IWeapon;
+import fantasyWorld.players.Player;
 
 public class Sword extends Weapon implements IWeapon {
 
@@ -22,6 +23,10 @@ public class Sword extends Weapon implements IWeapon {
 
     public String getName() {
         return name;
+    }
+
+    public int damage(Weapon weapon) {
+        return 0;
     }
 
     public String attack() {

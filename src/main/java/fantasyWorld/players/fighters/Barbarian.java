@@ -2,6 +2,8 @@ package fantasyWorld.players.fighters;
 
 
 import fantasyWorld.behaviours.IWeapon;
+import fantasyWorld.players.Player;
+import fantasyWorld.players.enemies.Enemy;
 import fantasyWorld.weapons.Sword;
 import fantasyWorld.weapons.Weapon;
 
@@ -32,4 +34,5 @@ public class Barbarian extends Fighter{
         }
         return foundWeapon;
     }
+
 }

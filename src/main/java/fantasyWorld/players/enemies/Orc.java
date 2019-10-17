@@ -1,6 +1,5 @@
 package fantasyWorld.players.enemies;
-
-import fantasyWorld.players.Player;
+import fantasyWorld.weapons.Sword;
 
 public class Orc extends Enemy {
 
@@ -8,8 +7,11 @@ public class Orc extends Enemy {
         super(healthPoints, name);
     }
 
-    public void damage(Player iweapon) {
-        this.getHealthPoints() - iweapon.attack
+
+    public void damage(Sword sword) {
+        int damage = sword.getDamagePoints();
+        int health = this.getHealthPoints();
+        health -= damage;
     }
 
 

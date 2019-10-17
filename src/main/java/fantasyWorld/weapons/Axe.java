@@ -24,6 +24,10 @@ public class Axe extends Weapon implements IWeapon {
         return name;
     }
 
+    public int damage(Weapon weapon) {
+        return 0;
+    }
+
     public String attack() {
         return "I attack with a axe ";
     }
