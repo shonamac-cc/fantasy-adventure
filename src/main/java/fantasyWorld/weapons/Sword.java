@@ -5,11 +5,11 @@ import fantasyWorld.behaviours.IWeapon;
 public class Sword extends Weapon implements IWeapon {
 
     private int damagePoints;
+    private String name;
 
 
-    public Sword(int damagePoints) {
-        super(damagePoints);
-
+    public Sword(int damagePoints, String name) {
+        super(damagePoints, name);
     }
 
     public int getDamagePoints() {
@@ -20,8 +20,15 @@ public class Sword extends Weapon implements IWeapon {
         this.damagePoints = damagePoints;
     }
 
-    @Override
+    public String getName() {
+        return name;
+    }
+
     public String attack() {
         return "I attack with a sword ";
+    }
+
+    public String addWeapon(String data) {
+        return data;
     }
 }

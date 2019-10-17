@@ -1,7 +1,11 @@
+import fantasyWorld.behaviours.IWeapon;
 import fantasyWorld.players.fighters.Barbarian;
+import fantasyWorld.weapons.Axe;
 import fantasyWorld.weapons.Sword;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,11 +13,13 @@ public class BarbarianTest {
 
     Barbarian conan;
     Sword sword;
+//    Axe axe;
 
     @Before
     public void before(){
         conan = new Barbarian(100);
-        sword = new Sword(20);
+        sword = new Sword(20, "excaliber");
+//        axe = new Axe(24);
     }
 
     @Test
@@ -24,5 +30,15 @@ public class BarbarianTest {
     @Test
     public void canAttack(){
         assertEquals("I attack with a sword and I've done x damage", conan.attack());
+    }
+
+    @Test
+    public void hasWeapon(){
+        conan.addWeapon(sword);
+        conan.addWeapon(sword);
+        ArrayList<IWeapon> expectedWeapons = new ArrayList<IWeapon>();
+        expectedWeapons.add(sword);
+        expectedWeapons.add(sword);
+        assertEquals(expectedWeapons, conan.getWeapon(sword));
     }
 }

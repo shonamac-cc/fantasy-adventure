@@ -1,14 +1,22 @@
 package fantasyWorld.weapons;
 
-public abstract class Weapon {
+import fantasyWorld.behaviours.IWeapon;
+
+public abstract class Weapon implements IWeapon {
 
     private int damagePoints;
+    private String name;
 
-    public Weapon(int damagePoints) {
+    public Weapon(int damagePoints, String name) {
         this.damagePoints = damagePoints;
+        this.name = name;
     }
 
     public int getDamagePoints() {
         return damagePoints;
+    }
+
+    public String  getName() {
+        return this.name;
     }
 }
