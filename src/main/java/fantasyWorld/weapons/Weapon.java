@@ -19,4 +19,8 @@ public abstract class Weapon implements IWeapon {
     public String  getName() {
         return this.name;
     }
+
+    public void setDamagePoints(int damagePoints) {
+        this.damagePoints = damagePoints;
+    }
 }

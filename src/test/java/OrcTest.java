@@ -24,6 +24,6 @@ public class OrcTest {
     @Test
     public void getDamage(){
         orc.damage(sword);
-        assertEquals(80,orc.getHealthPoints());
+        assertEquals(75, orc.getHealthPoints());
     }
 }
