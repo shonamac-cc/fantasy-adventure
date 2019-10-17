@@ -21,7 +21,7 @@ public class Sword extends Weapon implements IWeapon {
     }
 
     @Override
-    public String attack(Weapon weapon) {
+    public String attack() {
         return "I attack with a sword ";
     }
 }

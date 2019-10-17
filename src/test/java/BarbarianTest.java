@@ -23,6 +23,6 @@ public class BarbarianTest {
 
     @Test
     public void canAttack(){
-        assertEquals("I attack with a sword and I've done x damage", conan.attack(sword));
+        assertEquals("I attack with a sword and I've done x damage", conan.attack());
     }
 }
