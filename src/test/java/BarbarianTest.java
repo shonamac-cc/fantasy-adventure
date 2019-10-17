@@ -13,13 +13,13 @@ public class BarbarianTest {
 
     Barbarian conan;
     Sword sword;
-//    Axe axe;
+    Axe axe;
 
     @Before
     public void before(){
         conan = new Barbarian(100);
         sword = new Sword(20, "excaliber");
-//        axe = new Axe(24);
+        axe = new Axe(24, "CutterTron");
     }
 
     @Test
@@ -33,12 +33,21 @@ public class BarbarianTest {
     }
 
     @Test
-    public void hasWeapon(){
+    public void hasWeapons(){
         conan.addWeapon(sword);
         conan.addWeapon(sword);
+        conan.addWeapon(axe);
+        conan.addWeapon(axe);
         ArrayList<IWeapon> expectedWeapons = new ArrayList<IWeapon>();
         expectedWeapons.add(sword);
         expectedWeapons.add(sword);
-        assertEquals(expectedWeapons, conan.getWeapon(sword));
+        expectedWeapons.add(axe);
+        expectedWeapons.add(axe);
+                assertEquals(expectedWeapons, conan.getWeapons());
+    }
+
+    @Test
+    public void canChangeWeapon(){
+
     }
 }

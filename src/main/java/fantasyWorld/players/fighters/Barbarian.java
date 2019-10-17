@@ -25,12 +25,10 @@ public class Barbarian extends Fighter{
         return "I attack with a sword" + " and I've done x damage";
     }
 
-    public ArrayList<IWeapon> getWeapon(Weapon weapon) {
+    public ArrayList<IWeapon> getWeapons() {
         ArrayList<IWeapon> foundWeapon = new ArrayList<IWeapon>();
         for(IWeapon iWeapon : this.weapons){
-            if(iWeapon.getName() == weapon.getName()){
                 foundWeapon.add(iWeapon);
-            }
         }
         return foundWeapon;
     }
